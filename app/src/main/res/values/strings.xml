@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">lifePeace</string>
+    <string name="caso1.1estres">CASO 1:EN EL TRABAJO ME SENTI MAL  </string>
+    <string name="caso1estres">
+        Un dia en el trabajo me pidieron hacer muchas cosas a la vez, me costo decir que no puesto queria la aprobacion del todo el personal.
+        No me dio el tiempo para hacerlo, era tal la rapidez con la que intentaba hacerlo que me empezo a arder el estomago y me dolio la cabeza.
+        Solo pensando en que no cumpliria la tarea y mis jefes que me dirian.
+        Solucion:
+        Desde aquel momento fuerte y agudo que pase trato de ser lo mas transparente en las peticiones que me dan trato de dar todo mi esfuerzo, pero sin afectarme emocionalmente.
+        Muchos pensamos que el trabajo es todo en cierta parte de nuestra vida pero despues cuando miramos de retroceso no vale degastar la salud ni demasiado tiempo en ello.</string>
+
+    <string name="caso2.1estres"> CASO 2: EN MI EXAMEN FINAL </string>
+    <string name="caso2estres">
+        Mi examen final de la uni sentia los nervios que me carcomian y demasiado estres hasta para respirar antes de la pueba, habia estudadido muy bien.
+        Pero senti como siempre que me faltaba mas preparacion y pensaba en el fututo en todo lo malo que conllevaba fallar la prueba.
+        Solucion:
+        Desde ese dia trato estar mas relajado confio en todo lo que se y no trato de pensar en lo malo que sucederia si llegase a fallar la prueba.</string>
+        Trato de estabilizar mi mente pensando en cosas positivas sin peder el enfoque de pasar el examen.
+
+    <string name="caso3.1estres"> CASO 3: IBA A HABLAR EN PUBLICO EN EL AUDITOR DE UNA SALA GRANDE </string>
+    <string name="caso3estres">
+        Era la primera vez que iba a hablar en publico, toda la gente estaba esperando mi conferencia era por el trabajo la cabeza no dejaba de girarme.
+        Me visualizaba los peores escenarios donde me trababa o no sabia que decir cada vez la espera se me hacia imensa.
+        Solucion
+        Despues de cierto tiempo de ese evento comprendi que sentir nervios o estres al momento de hablar en publico es algo normal.
+        Hay que aprender a convivir con esa emocion ahora trato de hacer respiraciones profundas antes de una conferencia y trato de mostrar calma, ante el publico.
+        Una vez que estroy hablando y me siento confiado todo empieza a fluir de forma natural.</string>
+    <string name= "caso1.ansiedad">"Yo siempre he sufrido ansiedad. Desde que era muy pequeña me he sentido nerviosa, muy insegura, pero no le había puesto un nombre. Recuerdo que en primaria tenía problemas para relacionarme porque pensaba constantemente en qué iban a pensar de mí, y eso me generaba un malestar dentro que me daba muchos problemas.
+        Solucion: La medicación sin autoconocimiento y sin trabajar en tus emociones no sirve de nada. Lo que he mejorado desde que he comenzado a ir a terapia hasta ahora es un mundo.</string>
+    <string name= "caso2.ansiedad"> “Empecé a tener trastorno de ansiedad generalizada con 20 años. Era 2011 y acababa de empezar la carrera de Trabajo Social. Sin llegar a entender bien la situación, iba por la calle y me sentía triste y nerviosa. Por ejemplo, en el metro, si se paraba entre dos estaciones, me ponía blanca y con taquicardia.
+    Solucion:Estuve cuatro años con la psicóloga; cuatro años que fueron duros, pero también bonitos porque me hicieron aprender sobre mi vida, potenciar mi autoestima y sentirme más empoderada. </string>
+     <string name = "caso3.ansiedad"> "No recuerdo mi vida sin ansiedad. Empecé a tenerla desde muy pequeña. Con 5 años recuerdo que me dio un ataque de pánico porque mis padres y mis hermanos se fueron a hacer rafting a un río y yo me quedé sola con una cuidadora del hotel en el que estábamos.
+En aquella época lo llamaba “tener miedo”, y tenía miedo a muchas cosas.
+     Solucion:Gracias a terapias colectivas (y a hacer mejorar en su autoconocimiento) empezó a saber convivir con el trastorno. Empezó a dar pequeños pasos que se convirtieron en “grandes zancadas”. </string>
+    <string name="cronograma">Cronograma</string>
+
+
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".model.MainActivity"
+    >
+
+
+    <Button
+        android:id="@+id/ansiedad"
+        android:layout_width="413dp"
+        android:layout_height="158dp"
+        android:background="@color/ansiedad"
+        android:text="ANSIEDAD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.579"
+        android:textSize="38sp"/>
+
+    <Button
+        android:id="@+id/meditacion"
+        android:layout_width="410dp"
+        android:layout_height="173dp"
+        android:background="@color/meditacion"
+        android:text="MEDITACION"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.882"
+        android:textSize="38sp"/>
+
+    <Button
+        android:id="@+id/estrs"
+        android:layout_width="413dp"
+        android:layout_height="158dp"
+        android:background="@color/estres"
+        android:hint="es"
+        android:text="ESTRES"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.303" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="368dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:text="BIENVENIDO a LifePeace"
+        android:textColor="@color/black"
+        android:textSize="55sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragContent"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bnvMenu"
+            app:navGraph="@navigation/nav_graph"
+            app:defaultNavHost="true"
+            android:layout_width="match_parent"
+            />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnvMenu"
+            android:layout_width="413dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/principal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bnv_menu" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
