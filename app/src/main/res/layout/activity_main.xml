@@ -7,41 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".model.MainActivity"
     >
-
-
-    <Button
-        android:id="@+id/ansiedad"
-        android:layout_width="413dp"
-        android:layout_height="158dp"
-        android:background="@color/ansiedad"
-        android:text="ANSIEDAD"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579"
-        android:textSize="38sp"/>
-
-    <Button
-        android:id="@+id/meditacion"
-        android:layout_width="410dp"
-        android:layout_height="173dp"
-        android:background="@color/meditacion"
-        android:text="MEDITACION"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.882"
-        android:textSize="38sp"/>
-
     <Button
         android:id="@+id/estrs"
-        android:layout_width="413dp"
-        android:layout_height="158dp"
-        android:background="@color/estres"
+        android:layout_width="match_parent"
+        android:layout_height="159dp"
+        android:background="@drawable/shape_borde_estres"
         android:hint="es"
         android:text="ESTRES"
         android:textSize="38sp"
@@ -50,7 +20,36 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
+        app:layout_constraintVertical_bias="0.323" />
+
+    <Button
+        android:id="@+id/ansiedad"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:background="@drawable/shape_borde_ansiedad"
+        android:text="ANSIEDAD"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.603" />
+
+    <Button
+        android:id="@+id/meditacion"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/shape_borde_meditacion"
+        android:text="MEDITACION"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.882"
+        android:layout_marginTop="63dp"/>
 
     <TextView
         android:id="@+id/textView"
@@ -61,38 +60,31 @@
         android:gravity="center"
         android:text="BIENVENIDO a LifePeace"
         android:textColor="@color/black"
-        android:textSize="55sp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragContent"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_height="match_parent"
-            android:layout_above="@id/bnvMenu"
-            app:navGraph="@navigation/nav_graph"
-            app:defaultNavHost="true"
-            android:layout_width="match_parent"
-            />
+        android:layout_height="0dp"
+        android:id="@+id/fragment_container"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bnvMenu"
+        />
 
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bnvMenu"
-            android:layout_width="413dp"
-            android:layout_height="64dp"
-            android:layout_alignParentBottom="true"
-            android:background="@color/principal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bnv_menu" />
-
-    </RelativeLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnvMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/principal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bnv_menu"
+        app:itemIconTint="#303333"
+        app:itemTextColor="#303333"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

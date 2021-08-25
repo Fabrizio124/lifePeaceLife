@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.LifePeace" parent="Theme.AppCompat.DayNight">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/SegundoAnsiedad</item>
+        <item name="colorPrimaryVariant">@color/SegundoAnsiedad</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>

@@ -5,15 +5,44 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/mainActivity2">
 
-        <fragment
+    <fragment
             android:id="@+id/mainActivity2"
             android:name="com.platzi.lifepeace.model.MainActivity"
             android:label="activity_main"
-            tools:layout="@layout/activity_main" />
+            tools:layout="@layout/activity_main" >
+            <action
+                android:id="@+id/action_mainActivity2_to_datePickerFragment2"
+                app:destination="@id/datePickerFragment2" />
+            <action
+                android:id="@+id/action_mainActivity2_to_nuevaAnsiedad"
+                app:destination="@id/nuevaAnsiedad" />
+            <action
+                android:id="@+id/action_mainActivity2_to_nuevoEstres"
+                app:destination="@id/nuevoEstres" />
+            <action
+                android:id="@+id/action_mainActivity2_to_nuevaMeditacion"
+                app:destination="@id/nuevaMeditacion" />
+        </fragment>
             <action
                android:id="@+id/action_global_mainActivity"
-                app:destination="@id/navCalendarFragment" />
+                app:destination="@id/action_mainActivity2_to_datePickerFragment2" />
+    <fragment
+        android:id="@+id/datePickerFragment2"
+        android:name="com.platzi.lifepeace.model.DatePickerFragment"
+        android:label="DatePickerFragment" />
+    <activity
+        android:id="@+id/nuevaMeditacion"
+        android:name="com.platzi.lifepeace.NuevaMeditacion"
+        android:label="NuevaMeditacion" />
+    <activity
+        android:id="@+id/nuevoEstres"
+        android:name="com.platzi.lifepeace.NuevoEstres"
+        android:label="NuevoEstres" />
+    <activity
+        android:id="@+id/nuevaAnsiedad"
+        android:name="com.platzi.lifepeace.nuevaAnsiedad"
+        android:label="nuevaAnsiedad" />
 
-    </navigation>
+</navigation>
 
 

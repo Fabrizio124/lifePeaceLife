@@ -11,4 +11,7 @@
     <color name="estres">#CDFDFB</color>
     <color name="ansiedad">#D9FBF9</color>
     <color name="meditacion">#F0FADD</color>
+    <color name="azul">#034477</color>
+    <color name="SegundoAnsiedad">#5BACA7</color>
+    <color name="SegundoAnsiedad2">#164542</color>
 </resources>
