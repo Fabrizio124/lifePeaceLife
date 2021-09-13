@@ -8,6 +8,9 @@
     tools:context=".model.MainActivity"
     >
 
+
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="411dp"
@@ -25,13 +28,13 @@
 
     <TextView
         android:layout_width="wrap_content"
+        android:id="@+id/casoPrimero"
         android:layout_height="161dp"
         android:textSize="14sp"
         android:layout_marginTop="216dp"
         android:text="@string/caso1.ansiedad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,18 +50,60 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="181dp"
-        android:textSize="14sp"
         android:layout_marginBottom="4dp"
         android:text="@string/caso3.ansiedad"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_favorito2"
+        tools:layout_editor_absoluteX="229dp"
+        tools:layout_editor_absoluteY="352dp"
+        android:id="@+id/btnFavAnsiedad1"
+        android:layout_marginBottom="364dp"
+        android:background="@android:color/white"
+        android:drawableBottom="@drawable/ic_favorito2"
+        android:fillColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent"/>
 
+    <ImageView
+        android:id="@+id/btnFavAnsiedad2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:drawableBottom="@drawable/ic_favorito2"
+        android:fillColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_favorito2" />
 
+    <ImageView
+        android:id="@+id/btnFavAnsiedad3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:background="@android:color/white"
+        android:drawableBottom="@drawable/ic_favorito2"
+        android:fillColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_favorito2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

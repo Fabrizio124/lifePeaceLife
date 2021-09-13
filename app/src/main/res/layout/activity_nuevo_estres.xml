@@ -9,6 +9,47 @@
     >
 
 
+    <ImageView
+        android:id="@+id/btnFavEstres1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="492dp"
+        android:background="@android:color/white"
+        android:drawableBottom="@drawable/ic_favorito2"
+        android:fillColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_favorito2" />
+
+    <ImageView
+        android:id="@+id/btnFavEstres3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="296dp"
+        android:background="@android:color/white"
+        android:drawableBottom="@drawable/ic_favorito2"
+        android:fillColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_favorito2" />
+
+    <ImageView
+        android:id="@+id/btnFavEstres2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="136dp"
+        android:background="@android:color/white"
+        android:drawableBottom="@drawable/ic_favorito2"
+        android:fillColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_favorito2" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -24,8 +65,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="411dp"
+        android:layout_height="177dp"
         android:layout_marginBottom="316dp"
         android:text="@string/caso1estres"
         android:textSize="13sp"
@@ -79,8 +120,8 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="414dp"
+        android:layout_height="139dp"
         android:text="@string/caso3estres"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"

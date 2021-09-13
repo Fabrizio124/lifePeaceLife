@@ -43,7 +43,8 @@ class MainActivity : AppCompatActivity(),  DatePickerDialog.OnDateSetListener {
 
        // val estres = binding<EditText>(binding.estrs)
 
-        // Declaramos un val igualandolo a nuestro 'DatePickerFragment' y lo llamamos en nuestra funcion makeCurrentFragment
+        // Declaramos un val igualandolo a nuestro 'DatePickerFragment'
+        // y lo llamamos en nuestra funcion makeCurrentFragment
         var datePickerFragment = DatePickerFragment()
         makeCurrentFragment(datePickerFragment)
         var activitymain = MainActivity()
@@ -53,15 +54,13 @@ class MainActivity : AppCompatActivity(),  DatePickerDialog.OnDateSetListener {
         binding.bnvMenu.setOnItemSelectedListener  {
             var newFragment = DatePickerFragment()
             when(it.itemId){
-                //Cuando utilizamos el icono 'navCalendarFragment' llamamamos a 'DatePickerFragment' por medio de nuestro var
+                //Cuando utilizamos el icono 'navCalendarFragment'
+                    // llamamamos a 'DatePickerFragment' por medio de nuestro var
                 R.id.navCalendarFragment -> newFragment.show(supportFragmentManager, "datePickker")
                 R.id.navHomeFragment -> nuevoMakeCurrentFragment(activitymain)
             }
             true
-
         }
-
-
 
         //Botom de ansiedad para pasar a la vista de ansiedad
         binding.ansiedad.setOnClickListener(){
@@ -84,9 +83,8 @@ class MainActivity : AppCompatActivity(),  DatePickerDialog.OnDateSetListener {
             val intent:Intent = Intent(this, NuevaMeditacion::class.java )
             startActivity(intent)
         }
-
-
     }
+
 
     private fun nuevoMakeCurrentFragment(activitymain: MainActivity) {
         supportFragmentManager.beginTransaction().apply {
@@ -94,7 +92,7 @@ class MainActivity : AppCompatActivity(),  DatePickerDialog.OnDateSetListener {
             commit()
         }
     }
-        //
+
         private fun makeCurrentFragment(fragment: Fragment) =
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.fragment_container, fragment)
@@ -107,6 +105,5 @@ class MainActivity : AppCompatActivity(),  DatePickerDialog.OnDateSetListener {
             c.set(year, month, dayOfMonth)
             val seletedDate: String = DateFormat.getInstance().format(c.time)
         }
-
 
 }

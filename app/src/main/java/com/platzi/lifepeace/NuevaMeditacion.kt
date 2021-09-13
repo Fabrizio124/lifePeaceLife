@@ -10,7 +10,7 @@ import com.platzi.lifepeace.model.DatePickerFragment
 import java.text.DateFormat
 import java.util.*
 
-class NuevaMeditacion : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
+ class NuevaMeditacion : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
     private lateinit var binding: ActivityNuevaMeditacionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
