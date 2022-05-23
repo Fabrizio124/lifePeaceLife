@@ -7,7 +7,7 @@
 
     <fragment
             android:id="@+id/mainActivity2"
-            android:name="com.platzi.lifepeace.model.MainActivity"
+            android:name="com.platzi.lifepeace.ui.MainActivity"
             android:label="activity_main"
             tools:layout="@layout/activity_main" >
             <action
@@ -28,19 +28,19 @@
                 app:destination="@id/action_mainActivity2_to_datePickerFragment2" />
     <fragment
         android:id="@+id/datePickerFragment2"
-        android:name="com.platzi.lifepeace.model.DatePickerFragment"
+        android:name="com.platzi.lifepeace.data.model.DatePickerFragment"
         android:label="DatePickerFragment" />
     <activity
         android:id="@+id/nuevaMeditacion"
-        android:name="com.platzi.lifepeace.NuevaMeditacion"
+        android:name="com.platzi.lifepeace.ui.NuevaMeditacion"
         android:label="NuevaMeditacion" />
     <activity
         android:id="@+id/nuevoEstres"
-        android:name="com.platzi.lifepeace.NuevoEstres"
+        android:name="com.platzi.lifepeace.ui.NuevoEstres"
         android:label="NuevoEstres" />
     <activity
         android:id="@+id/nuevaAnsiedad"
-        android:name="com.platzi.lifepeace.nuevaAnsiedad"
+        android:name="com.platzi.lifepeace.ui.nuevaAnsiedad"
         android:label="nuevaAnsiedad" />
 
 </navigation>

@@ -1,39 +1,25 @@
-package com.platzi.lifepeace.model
+package com.platzi.lifepeace.ui
 
-import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Layout
-import android.text.TextUtils.replace
-import android.util.Log
-import android.view.View
 import android.widget.DatePicker
-import android.widget.EditText
-import android.widget.FrameLayout
 import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintSet
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.navigation.Navigation
-import androidx.navigation.ui.NavigationUI
-import com.platzi.lifepeace.NuevaMeditacion
-import com.platzi.lifepeace.NuevoEstres
-import com.platzi.lifepeace.R
+import com.platzi.lifepeace.*
 import com.platzi.lifepeace.databinding.ActivityMainBinding
-import com.platzi.lifepeace.databinding.ActivityNuevaAnsiedadBinding
-import com.platzi.lifepeace.databinding.FragmentAnsiedadBinding
-import com.platzi.lifepeace.nuevaAnsiedad
+import com.platzi.lifepeace.data.model.AppDatabase
+import com.platzi.lifepeace.data.model.DatePickerFragment
+import com.platzi.lifepeace.data.model.FavoritesFragment
 import java.text.DateFormat
 import java.util.*
-
-
-
 
 class MainActivity : AppCompatActivity(),  DatePickerDialog.OnDateSetListener {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var  database: AppDatabase
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     //    setContentView(R.layout.activity_main)
@@ -49,6 +35,8 @@ class MainActivity : AppCompatActivity(),  DatePickerDialog.OnDateSetListener {
         makeCurrentFragment(datePickerFragment)
         var activitymain = MainActivity()
         nuevoMakeCurrentFragment(activitymain)
+        var favoritesFragment = FavoritesFragment()
+        favoritesMakeCurrentFragment(favoritesFragment)
 
        // Utilizamos 'setOnItemSelectedListener' para usar nuestro botom 'navCalendarFragment'
         binding.bnvMenu.setOnItemSelectedListener  {
@@ -58,6 +46,8 @@ class MainActivity : AppCompatActivity(),  DatePickerDialog.OnDateSetListener {
                     // llamamamos a 'DatePickerFragment' por medio de nuestro var
                 R.id.navCalendarFragment -> newFragment.show(supportFragmentManager, "datePickker")
                 R.id.navHomeFragment -> nuevoMakeCurrentFragment(activitymain)
+                R.id.navFavoriteFragment -> favoritesMakeCurrentFragment(favoritesFragment)
+                // R.id.navFavoriteFragment ->favorites(favoritesFragment)
             }
             true
         }
@@ -84,6 +74,23 @@ class MainActivity : AppCompatActivity(),  DatePickerDialog.OnDateSetListener {
             startActivity(intent)
         }
     }
+
+    private fun favoritesMakeCurrentFragment(favoritesFragment: FavoritesFragment) {
+        supportFragmentManager.beginTransaction().apply {
+            (R.id.fragment_container)
+            commit()
+        }
+    }
+
+    /*private  fun favorites(favoritesFragment: FavoritesFragment) {
+        val text1 = ("Un dia en el trabajo me pidieron hacer muchas cosas a la vez, me costo decir que no puesto queria la aprobacion del todo el personal.\n" +
+                "        No me dio el tiempo para hacerlo, era tal la rapidez con la que intentaba hacerlo que me empezo a arder el estomago y me dolio la cabeza.\n" +
+                "        Solo pensando en que no cumpliria la tarea y mis jefes que me dirian.\n" +
+                "        Solucion:\n" +
+                "        Desde aquel momento fuerte y agudo que pase trato de ser lo mas transparente en las peticiones que me dan trato de dar todo mi esfuerzo, pero sin afectarme emocionalmente.\n" +
+                "        Muchos pensamos que el trabajo es todo en cierta parte de nuestra vida pero despues cuando miramos de retroceso no vale degastar la salud ni demasiado tiempo en ello.")
+        database.textDao().insertFavorite(text1)
+    }*/
 
 
     private fun nuevoMakeCurrentFragment(activitymain: MainActivity) {

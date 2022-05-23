@@ -5,12 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".model.MainActivity"
+    tools:context=".ui.MainActivity"
     >
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost ="true"
+        app:NavGraph = "@navigation/main_graph"/>
+
+
     <Button
         android:id="@+id/estrs"
         android:layout_width="match_parent"
-        android:layout_height="159dp"
+        android:layout_height="120dp"
         android:background="@drawable/shape_borde_estres"
         android:hint="es"
         android:text="ESTRÉS"
@@ -25,21 +34,28 @@
     <Button
         android:id="@+id/ansiedad"
         android:layout_width="match_parent"
-        android:layout_height="165dp"
+        android:layout_height="117dp"
         android:background="@drawable/shape_borde_ansiedad"
         android:text="ANSIEDAD"
         android:textSize="38sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Frase"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603" />
+        app:layout_constraintTop_toBottomOf="@+id/estrs" />
+
+    <Button
+        android:id="@+id/Frase"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/shape_borde_meditacion"
+        android:text="Frase del dia"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toTopOf="@+id/meditacion" />
 
     <Button
         android:id="@+id/meditacion"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="100dp"
         android:background="@drawable/shape_borde_meditacion"
         android:text="MEDITACIÓN"
         android:textSize="38sp"
@@ -57,21 +73,26 @@
         android:layout_height="164dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="BIENVENIDO PARA LifePeace"
+        android:text="Bienvenido Para LifePeace"
         android:textColor="@color/black"
         android:textSize="45sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
     <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:id="@+id/fragment_container"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/bnvMenu"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-27dp">
 
+
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnvMenu"
@@ -85,7 +106,6 @@
         app:menu="@menu/bnv_menu"
         app:itemIconTint="@color/SegundoAnsiedad2"
         app:itemTextColor="#303333"
-
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

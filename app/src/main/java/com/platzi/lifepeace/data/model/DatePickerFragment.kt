@@ -1,4 +1,4 @@
-package com.platzi.lifepeace.model
+package com.platzi.lifepeace.data.model
 
 import android.app.DatePickerDialog
 import android.app.Dialog

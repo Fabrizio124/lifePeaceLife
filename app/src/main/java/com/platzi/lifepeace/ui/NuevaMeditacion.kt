@@ -1,12 +1,11 @@
-package com.platzi.lifepeace
+package com.platzi.lifepeace.ui
 
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.DatePicker
-import androidx.core.view.marginBottom
 import com.platzi.lifepeace.databinding.ActivityNuevaMeditacionBinding
-import com.platzi.lifepeace.model.DatePickerFragment
+import com.platzi.lifepeace.data.model.DatePickerFragment
 import java.text.DateFormat
 import java.util.*
 

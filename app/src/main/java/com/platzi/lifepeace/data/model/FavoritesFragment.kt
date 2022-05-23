@@ -1,4 +1,4 @@
-package com.platzi.lifepeace.model
+package com.platzi.lifepeace.data.model
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.platzi.lifepeace.R
 import com.platzi.lifepeace.databinding.ActivityNuevaAnsiedadBinding
-import com.platzi.lifepeace.databinding.ActivityNuevaMeditacionBinding
 import com.platzi.lifepeace.databinding.ActivityNuevoEstresBinding
 
 
