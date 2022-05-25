@@ -1,3 +1,10 @@
 package com.platzi.lifepeace.data.model.remote
 
-data class LifeList (val keywords: List<String> = listOf())
+import com.google.gson.annotations.SerializedName
+
+data class LifeList (
+
+    @SerializedName("quote"  ) var quote  : String? = null,
+    @SerializedName("author" ) var author : String? = null
+
+)

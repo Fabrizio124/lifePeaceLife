@@ -1,15 +1,13 @@
 package com.platzi.lifepeace.data.model
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import com.platzi.lifepeace.data.model.remote.LifeList
+import retrofit2.Response
+import retrofit2.http.GET
+import retrofit2.http.Url
 
-@Dao
+
 interface TextDao {
-    @Query("SELECT * FROM TextoFav ")
-    suspend fun getAllTexts():List<TextoFav>
+    @GET
+    fun getFrases(@Url url:String): Response<LifeList>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertFavorite(texto: kotlin.String)
 }

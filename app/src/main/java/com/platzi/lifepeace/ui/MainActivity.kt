@@ -12,6 +12,13 @@ import com.platzi.lifepeace.databinding.ActivityMainBinding
 import com.platzi.lifepeace.data.model.AppDatabase
 import com.platzi.lifepeace.data.model.DatePickerFragment
 import com.platzi.lifepeace.data.model.FavoritesFragment
+import com.platzi.lifepeace.data.model.TextDao
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import java.text.DateFormat
 import java.util.*
 
@@ -72,6 +79,34 @@ class MainActivity : AppCompatActivity(),  DatePickerDialog.OnDateSetListener {
         binding.meditacion.setOnClickListener(){
             val intent:Intent = Intent(this, NuevaMeditacion::class.java )
             startActivity(intent)
+        }
+
+        //Botom de frase para pasar a la vista de frase
+        binding.Frase?.setOnClickListener {
+            val intent:Intent = Intent(this, NuevoEstres::class.java )
+            startActivity(intent)
+            val nuevoMessage = "Mira tu frase del dia"
+            Toast.makeText(this,nuevoMessage, Toast.LENGTH_LONG).show()
+        }
+    }
+
+    //Funcion para llamar nuestro API, retrofit
+    private fun getRetrofit(): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl("https://free-quotes-api.herokuapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+
+    //Corrutina
+    private fun searchByName(query:String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val call = getRetrofit().create(TextDao::class.java).getFrases("https://free-quotes-api.herokuapp.com/")
+            val authors = call.body()
+            if(call.isSuccessful){
+                // show fragment
+            }
+            // if not show error
         }
     }
 

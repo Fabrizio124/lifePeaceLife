@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LifePeace">
-        <activity android:name=".ui.NuevaMeditacion" />
-        <activity android:name=".ui.NuevoEstres" />
-        <activity android:name=".ui.nuevaAnsiedad" />
-        <activity android:name=".ui.MainActivity">
+        <activity
+            android:name=".NewPhraseActivity"
+            android:exported="false" />
+        <activity android:name="com.platzi.lifedemo.lifepeace.ui.NuevaMeditacion" />
+        <activity android:name="com.platzi.lifedemo.lifepeace.ui.NuevoEstres" />
+        <activity android:name="com.platzi.lifedemo.lifepeace.ui.nuevaAnsiedad" />
+        <activity android:name="com.platzi.lifedemo.lifepeace.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -10,7 +10,7 @@ android {
 
 
     defaultConfig {
-        applicationId "com.platzi.lifepeace"
+        applicationId "com.lifedemo.lifepeace"
         minSdkVersion 25
         targetSdkVersion 30
         versionCode 1
