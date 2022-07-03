@@ -7,5 +7,4 @@ class LifeDataSource(private val webService: WebService) {
 
     suspend fun getUpcomingLife() : LifeList = webService.getUpcomingLife(AppConstants.BASE_URL)
 
-
 }

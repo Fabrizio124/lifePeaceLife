@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity(),  DatePickerDialog.OnDateSetListener {
 
         //Botom de ansiedad para pasar a la vista de ansiedad
         binding.ansiedad.setOnClickListener(){
-            val intent:Intent = Intent(this, nuevaAnsiedad::class.java )
+            val intent:  Intent = Intent(this, nuevaAnsiedad::class.java )
             startActivity(intent)
             val message = "En esta sección te compartimos tres casos reales de situaciónes de ansiedad"
             Toast.makeText(this,message, Toast.LENGTH_LONG).show()
@@ -108,6 +108,11 @@ class MainActivity : AppCompatActivity(),  DatePickerDialog.OnDateSetListener {
             }
             // if not show error
         }
+    }
+
+    // Si no llama a la api mostrar un error
+    private fun showError(){
+        Toast.makeText(this, "Ha ocurrido un error", Toast.LENGTH_SHORT).show()
     }
 
     private fun favoritesMakeCurrentFragment(favoritesFragment: FavoritesFragment) {

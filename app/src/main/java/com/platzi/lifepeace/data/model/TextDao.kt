@@ -8,6 +8,6 @@ import retrofit2.http.Url
 
 interface TextDao {
     @GET
-    fun getFrases(@Url url:String): Response<LifeList>
+    suspend fun getFrases(@Url url:String): Response<LifeList>
 
 }

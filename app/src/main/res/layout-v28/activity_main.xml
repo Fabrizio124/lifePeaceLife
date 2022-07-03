@@ -46,7 +46,8 @@
     <Button
         android:id="@+id/Frase"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:paddingBottom="16dp"
+        android:layout_height="110dp"
         android:background="@drawable/shape_borde_meditacion"
         android:text="Frase del dia"
         android:textSize="38sp"
